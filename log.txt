@@ -1,0 +1,46 @@
+Request method:	POST
+Request URI:	https://automationintesting.online/booking/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "bookingid": 0,
+    "roomid": 1,
+    "firstname": "string",
+    "lastname": "string",
+    "depositpaid": true,
+    "email": "string",
+    "phone": "stringstrin",
+    "bookingdates": {
+        "checkin": "2024-12-23",
+        "checkout": "2024-12-23"
+    }
+}
+HTTP/1.1 400 
+Date: Tue, 24 Dec 2024 09:47:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cf-cache-status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ujmOvC7JbkAcBu0YyoFdVqEtJnzNqbL1Tm%2Bap%2Fzp8eDuqk59KiTDlC%2F9keq9nKbUT2sOrcUQQSdx630cquUIzWaS%2Bs6fQSc8MPzif2TfEsXo0ul%2BbPskP0SiRQvUiIUJOiUxIsIRLQ8uicaquA%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8f6fab565808f2da-BOM
+alt-svc: h3=":443"; ma=86400
+server-timing: cfL4;desc="?proto=TCP&rtt=38707&min_rtt=34282&rtt_var=17576&sent=7&recv=7&lost=0&retrans=0&sent_bytes=3157&recv_bytes=1080&delivery_rate=82375&cwnd=252&unsent_bytes=0&cid=d6c9582e57533bc9&ts=706&x=0"
+
+{
+    "errorCode": 400,
+    "error": "BAD_REQUEST",
+    "errorMessage": "Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.automationintesting.api.BookingController.createBooking(com.automationintesting.model.db.Booking) throws java.sql.SQLException: [Field error in object 'booking' on field 'email': rejected value [string]; codes [Email.booking.email,Email.email,Email.java.util.Optional,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@542a50b6,.*]; default message [must be a well-formed email address]] ",
+    "fieldErrors": [
+        "must be a well-formed email address"
+    ]
+}
