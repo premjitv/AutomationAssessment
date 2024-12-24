@@ -11,7 +11,7 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.specification.RequestSpecification;
 
 public class util {
-
+	public static String bookingId;
     public RequestSpecification requestSpec;
 
     public RequestSpecification requestSpecification1() throws IOException {
@@ -30,6 +30,8 @@ public class util {
                           
         return requestSpec;
     }
+    
+    
 
 
 }

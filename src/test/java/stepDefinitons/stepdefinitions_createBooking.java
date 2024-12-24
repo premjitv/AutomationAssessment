@@ -24,8 +24,8 @@ public class stepdefinitions_createBooking extends util {
 
     @Given("the API end point")
     public void the_api_end_point() throws IOException {
-    	 // Initialize the requestSpec by calling the method from the util class
-        requestSpec = requestSpecification1(); // This will set up your request specification
+    	 // Initialize the requestSpec from the util class
+        requestSpec = requestSpecification1(); // set up request specification
         // Initialize Response Specification
         responseSpec = expect()
                            .statusCode(200)
@@ -46,7 +46,8 @@ public class stepdefinitions_createBooking extends util {
         response.then().spec(responseSpec);
         
         JsonPath js = response.jsonPath();
-        String roomid= js.getString("roomid");
+        //String roomid= js.getString("roomid");
+        util.bookingId=response.jsonPath().getString("roomId");
     }
 
     
