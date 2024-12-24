@@ -13,8 +13,8 @@ import File.util;
 public class stepdefinition_deleteBooking {
 	
 	
-	private String bookingId;  // Variable to store booking ID
-    private Response response; // Variable to store the response
+	private String bookingId;  
+    private Response response; 
 
     @Given("having the booking ID {string}")
     public void having_the_booking_id(String bookingId) {
@@ -26,7 +26,7 @@ public class stepdefinition_deleteBooking {
 
     @When("send a DELETE request to delete the booking with the ID")
     public void send_a_delete_request_to_delete_the_booking_with_the_id() {
-        // Send the DELETE request using the path parameter for booking ID
+        // Send the DELETE request 
         response = given()
                 .pathParam("id", bookingId)  
                 .header("token", "Token")
@@ -44,7 +44,7 @@ public class stepdefinition_deleteBooking {
         String responseBody = response.getBody().asString();
         JsonPath js = new JsonPath(responseBody);
 
-        // Verify that the response confirms the deletion
+        // Verify the response confirms the deletion
         String deletedBookingId = js.getString("deletedId");
         //System.out.println("Deleted Booking ID: " + deletedBookingId);
 

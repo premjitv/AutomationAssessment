@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import static org.hamcrest.Matchers.*;
-
 import java.io.IOException;
 
 import static io.restassured.RestAssured.*;
@@ -20,16 +19,14 @@ public class stepdefinitions_createBooking extends util {
 
     private RequestSpecification requestSpec; 
     private ResponseSpecification responseSpec; 
-    private Response response; // Store the response
+    private Response response; 
 
     @Given("the API end point")
     public void the_api_end_point() throws IOException {
     	 // Initialize the requestSpec from the util class
-        requestSpec = requestSpecification1(); // set up request specification
+        requestSpec = requestSpecification1(); 
         // Initialize Response Specification
-        responseSpec = expect()
-                           .statusCode(200)
-                           .statusLine(containsString("OK"));
+        responseSpec = expect() .statusCode(200).statusLine(containsString("OK"));
     }
     @When("I make POST request")
     public void i_make_post_request() {

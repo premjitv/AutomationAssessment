@@ -61,7 +61,7 @@ public class stepDefinitions_updateBookingdetails {
   @Then("the response should reflect the updated guest name {string}")
   public void the_response_should_reflect_the_updated_guest_name(String expectedGuestName) {
       JsonPath js = new JsonPath(response);
-      String guestName = js.getString("firstname"); // Assuming "firstname" is the field in the response
+      String guestName = js.getString("firstname");
       assertEquals(expectedGuestName, guestName);
   }
 

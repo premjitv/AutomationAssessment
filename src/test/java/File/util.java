@@ -17,8 +17,7 @@ public class util {
     public RequestSpecification requestSpecification1() throws IOException {
         // Setup logging
         PrintStream log = new PrintStream(new FileOutputStream("log.txt"));
-        
-        
+               
         RestAssured.baseURI = "https://automationintesting.online";
 
         // Configure request specification

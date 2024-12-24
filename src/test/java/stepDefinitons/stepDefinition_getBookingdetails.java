@@ -25,7 +25,7 @@ public class stepDefinition_getBookingdetails {
 	    String bookingID = util.bookingId;
 	    @Given("having a valid booking ID")
 	    public void having_a_valid_booking_id() {
-	        // Simulate having a valid booking ID
+	        
 	        bookingId = bookingID; // get the booking Id from stepdefinitions_createBooking 
 	        //System.out.println("Booking ID: " + bookingID);
 	    }
@@ -37,7 +37,7 @@ public class stepDefinition_getBookingdetails {
 	                .queryParam("roomid", bookingId)
 	                .header("token", token)
 	                .when()
-	                .get("/booking/") // Replace with actual endpoint
+	                .get("/booking/")
 	                .then()
 	                .assertThat()
 	                .statusCode(200)
