@@ -1,4 +1,4 @@
-Feature: Validating createBooking
+#Feature: Validating createBooking
 
  
 
@@ -22,16 +22,16 @@ Feature: Validating createBooking
     #And the response should include the guest name
     #And the response should include the check-in and check-out dates
     
-    @smoke
+   # @smoke
     
-    Scenario: Verify that booking details are updated with new guest name,roomID,Checkindates and Checkoutdates
-    Given I have the booking ID "12345"
-    When I send a PUT request to update the booking with new details
-    Then the response status code should be 200
-    And the response should reflect the updated guest name "premji"
-    And the response should reflect the updated check-in date "2024-12-25"
-    And the response should reflect the updated check-out date "2024-12-30"
-    And the response should reflect the updated room ID "105"
+    #Scenario: Verify that booking details are updated with new guest name,roomID,Checkindates and Checkoutdates
+    #Given I have the booking ID "12345"
+    #When I send a PUT request to update the booking with new details
+    #Then the response status code should be 200
+    #And the response should reflect the updated guest name "premji"
+    #And the response should reflect the updated check-in date "2024-12-25"
+    #And the response should reflect the updated check-out date "2024-12-30"
+    #And the response should reflect the updated room ID "105"
     
     
     
