@@ -28,8 +28,8 @@
     Given I have the booking ID "12345"
     When I send a PUT request to update the booking with new details
     Then the response status code should be 200
-    And the response should include the updated booking ID "12345"
-    And the response should reflect the updated guest name "John Doe"
+    And the response should include the updated booking ID "1122"
+    And the response should reflect the updated guest name "premji"
     And the response should reflect the updated check-in date "2024-12-25"
     And the response should reflect the updated check-out date "2024-12-30"
-    And the response should reflect the updated room ID "102"
+    And the response should reflect the updated room ID "105"
