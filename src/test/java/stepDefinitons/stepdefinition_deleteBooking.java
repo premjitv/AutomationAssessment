@@ -18,7 +18,7 @@ public class stepdefinition_deleteBooking {
 
     @Given("having the booking ID {string}")
     public void having_the_booking_id(String bookingId) {
-        // Store the booking ID
+        // Storing the booking ID
         this.bookingId = bookingId;
     
         //System.out.println("Booking ID: " + bookingId);
