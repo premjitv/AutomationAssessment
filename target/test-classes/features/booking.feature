@@ -32,3 +32,14 @@ Feature: Validating createBooking
     And the response should reflect the updated check-in date "2024-12-25"
     And the response should reflect the updated check-out date "2024-12-30"
     And the response should reflect the updated room ID "105"
+    
+    
+    
+    
+  	Feature: Deleting booking details by booking ID
+
+  	Scenario:Verify that booking details can be deleted successfully using a valid booking ID
+    Given having the booking ID "12345"
+    When send a DELETE request to delete the booking with the ID
+    Then the response status code should be 200
+    And the response should confirm the deletion of the booking with ID "12345"
